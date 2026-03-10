@@ -10,11 +10,19 @@ phishing red-flags that may be apparent to a more tech savvy person.
 This is the outline for the agent so far.
 phishing-analyzer/
 ├── main.py               # Entry point
+
 ├── src/
 │   ├── agent.py          # Gemini Live API voice agent setup
+
 │   └── analyzer.py       # Phishing analysis logic & prompts
+
 ├── tests/
+
 │   └── test_analyzer.py  # Unit tests
+
 ├── docs/                 # Additional documentation
+
 ├── requirements.txt
+
 ├── .env.example
+
