@@ -1,0 +1,21 @@
+Activity Description
+The Gemini Live Agent Challenge is a hackathon run by Google Cloud where participants build AI agents using the Gemini Live API and Google Gen AI SDK. There are three categories to compete in, Live Agent, Creative Storyteller, 
+and UI Navigator and submissions are open until March 16, 2026. The challenge pushes builders beyond simple text chatbots and into multimodal territory: voice, images, and real time interaction.
+I picked the Live Agent category and decided to build PhishGuard, a voice enabled phishing email analyzer. The idea is that a user can describe or paste a suspicious email and have a 
+back and forth conversation with the agent about what makes it dangerous, explained in plain English. It felt like a natural fit given my cybersecurity background, and it's the kind of tool that could actually be useful to someone like my parents.
+As of now, the project is underway. The repo is structured, the core agent is built and can respond in very basic ways. This will be built upon to create a more casual experience.
+Technical Decisions
+The first decision I made was model selection. I went with gemini-2.0-flash, for a conversational interface, response speed matters more than raw power, and flash handles the task well without unnecessary overhead.
+I also separated the agent initialization logic (GeminiAgent.py) from the analysis logic (analyzer.py) early on. It keeps things clean and means I can update the system prompt or swap the model without touching unrelated code. 
+The system prompt took a few iterations, I wanted PhishGuard to explain the "why" behind each red flag rather than just listing them, which will require some deliberate framing.
+Contributions
+I'm working on this independently. The concept, repo structure, system prompt, and implementation have all been my own work. Choosing the phishing analyzer idea was deliberate,
+I wanted something connected to what I'm actually studying so the project felt worthwhile rather than arbitrary.
+So far, my individual contributions include, selecting and scoping the project idea, scaffolding the full repo structure, writing the PhishGuard 
+system prompt and writing the analysis logic which I am still trying to figure out as I am uncertain how the instructions should look.
+Quality Assessment & Next Steps
+So far I'm happy with how the project has come together. Getting a clean, well-structured repo and a working agent built in a single session
+was a good start, and the idea is focused enough to be achievable but interesting enough to feel worth submitting.
+Between now and March 16th, I will finalize the agent logic, look to try out audio to text respones using Gemini Live API's real-time voice features so users can actually speak to PhishGuard rather than type.
+If time allows, I'd also like to deploy it to Cloud Run so it's accessible without a local setup, that would make it a much stronger 
+submission. The biggest thing I'd do differently looking back is start the voice integration earlier, since that's the part that differentiates a Live Agent entry from a standard chatbot
